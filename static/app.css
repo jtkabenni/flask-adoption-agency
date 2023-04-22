@@ -1,0 +1,23 @@
+img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.pets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.error {
+  color: palevioletred;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{pet.name}} {% if pet.available %}
+  - adopt me!
+  {% endif %}</h1>
+<div class="update-buttons">
+  <div><a href="/pets/{{ pet.id }}/edit"><button>Edit pet</button></a></div>
+  <form action="/pets/{{ pet.id }}/delete" method="POST">
+    <button>Delete pet</button>
+  </form>
+</div>
+<img src="{{pet.image_url}}">
+
+<p>{{pet.species}}
+  {% if pet.age %}
+  <span> - {{pet.age}} yr</span>
+  {% endif %}
+</p>
+{% if pet.notes %}
+<p>{{pet.notes}}</p>
+{% endif %}
+
+{% endblock %}
